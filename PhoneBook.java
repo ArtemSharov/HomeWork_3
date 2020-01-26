@@ -14,7 +14,7 @@ import java.util.Scanner;
   Итого должно получиться 3 класса Main, PhoneBook, Person.
  */
 public class PhoneBook {
-   private String FIO;
+
 
 
     HashMap<String, ArrayList<String>> hm = new HashMap<String, ArrayList<String>>();
@@ -26,30 +26,29 @@ public class PhoneBook {
         }
     }
     public void findPhone(){
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите фамилию:");
+        System.out.println("Для поика номера телефона, введите фамилию:");
         String FIO = sc.nextLine();
      for(Map.Entry<String, ArrayList<String>> o : hm.entrySet()){
             if(hm.containsKey(FIO)){
-                ArrayList<String> tel = new ArrayList<>(o.getValue());
-                System.out.println("Номер телефона: " + tel.get(1));
-            } else {System.out.println("Нет такой записи");}
+                ArrayList<String> tel = new ArrayList<>(hm.get(FIO));
+                System.out.println("Номер телефона " + FIO + ": " + tel.get(0));
+            } else System.out.println("Такого человека нет в телефонной книге");
+         break;
             }
-        System.out.println("НЕ РАБОТАЕТ");
         }
     public void findEmail(){
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите фамилию:");
+        System.out.println("Для поиска e-mail, введите фамилию:");
         String FIO = sc.nextLine();
         for(Map.Entry<String, ArrayList<String>> o : hm.entrySet()){
             if(hm.containsKey(FIO)){
-                ArrayList<String> tel = new ArrayList<>(o.getValue());
-                System.out.println("e-mail: " + tel.get(2));
-            } else {System.out.println("Нет такой записи");}
+                ArrayList<String> tel = new ArrayList<>(hm.get(FIO));
+                System.out.println("e-mail " + FIO + ": " + tel.get(1));
+            } else System.out.println("Такого человека нет в телефонной книге");
+            break;
         }
-        System.out.println("НЕ РАБОТАЕТ");
+
     }
 
 

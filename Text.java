@@ -57,5 +57,6 @@ public class Text {
         for (Map.Entry<String, Integer> o : hm.entrySet()) {
             System.out.println(o.getKey() + ": " + o.getValue());
         }
+
     }
 }
