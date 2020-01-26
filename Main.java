@@ -7,7 +7,6 @@ public class Main {
         p.newRecord("Петров", "8-962-222-22-22 petrov@mail.com");
         p.newRecord("Сидоров", "8-962-333-33-33 sidorov@mail.com");
         p.printBook();
-
         p.findPhone();
         p.findEmail();
 
